@@ -8,8 +8,11 @@
     <meta name="Keywords" content="HTML, CSS, Javascript, jQuery">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="default.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    
+    <?php 
+        echo('Hello world!');
+    ?>
 </body>
 </html>
