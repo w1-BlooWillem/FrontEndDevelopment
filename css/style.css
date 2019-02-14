@@ -33,3 +33,13 @@ menu {
     margin-left: 10px;
 }
 
+
+    width: 100%;
+    border-bottom:1px solid black;
+    display: table;
+}
+.pad-both{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
