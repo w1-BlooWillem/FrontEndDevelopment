@@ -20,8 +20,14 @@
         </div>
     </header>
     <main>
-        <div id="winkelwagen">
-        
+        <div class="winkelitem">
+            <div class="winkelimage"></div>
+            <div class="winkeltxt">
+                Amstel wit<br/>
+                Prijs: 2,00<br/>
+                <div class="winkelamount">2</div>
+            
+            </div>
         </div>
     </main>
     <footer>
@@ -29,3 +35,29 @@
     </footer>
 </body>
 </html>
+
+<style>
+    .winkelitem {
+        position: relative;
+        display: block;
+        background: blue; 
+        height: 300px;
+        width: 600px;
+    }
+    .winkelimage {
+        position: relative;
+        display: block;
+        background: red; 
+        height: 300px;
+        float: left;
+        width: 300px;
+    }
+    
+    .winkelamount {
+        position: relative;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+
+</style>
