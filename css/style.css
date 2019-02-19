@@ -19,6 +19,21 @@ header{
 #zone-header-wrapper{
     position: relative;
 }
+.columns-12{
+    max-width:1600px;
+}
+.center{
+    margin: 0 auto;
+}
+#product .content-wrapper{
+    width:80%;
+    float:left;
+}
+.product-image{
+    width: 20%;
+    position: relative;
+    top:50px;
+}
 .btn{
     background-color:#F3B75B;
     color:black;
@@ -69,4 +84,9 @@ header{
 footer{
     text-align: center;
     border-top: 1px solid #000;
+    clear:both;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding:10px 0;
 }
