@@ -37,21 +37,27 @@ header{
     width:80%;
     float:left;
 }
+#product h1{
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 #product p{
     position: relative;
     z-index: 5;
+    font-size: 20px;
 }
 .product-image{
     width: 20%;
     position: relative;
-    top:50px;
+    top:40px;
 }
 .btn{
     background-color:#F3B75B;
     color:black;
     text-decoration: none;
     padding: 15px;
-    border:1px solid black;
+    border:1px solid rgba(255, 190, 93, 0.507);
     position: relative;
     top:53px;
     left:100px;
