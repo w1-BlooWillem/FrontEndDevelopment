@@ -108,3 +108,26 @@ footer{
     width: 100%;
     padding:10px 0;
 }
+
+/* Code Willem */
+
+.product{
+    width: 25%;
+    float: left;
+    height: 30%;
+}
+.product img{
+    height: 10%;
+    width: 10%;
+}
+.newsArticle{
+    width: 80%;
+    float: left;
+    height: 100%;
+}
+.newsArticle img{
+    float: left;
+    display: block;
+    width: 20%;
+    height: 100%;
+}
