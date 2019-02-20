@@ -30,12 +30,16 @@ header{
     top:200px;
     left:50%;
     transform:translateX(-50%);
-    opacity:.5;
+    opacity:.2;
     width: 30%;
 }
 #product .content-wrapper{
     width:80%;
     float:left;
+}
+#product p{
+    position: relative;
+    z-index: 5;
 }
 .product-image{
     width: 20%;
