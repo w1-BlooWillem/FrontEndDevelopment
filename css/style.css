@@ -16,6 +16,13 @@ header{
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+main {
+    
+    height: auto;
+    display: block;
+}
+
 #zone-header-wrapper{
     position: relative;
 }
@@ -103,7 +110,7 @@ footer{
     text-align: center;
     border-top: 1px solid #000;
     clear:both;
-    position: absolute;
+    position: relative;
     bottom:0;
     width: 100%;
     padding:10px 0;
