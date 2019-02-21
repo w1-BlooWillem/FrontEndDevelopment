@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brouwwereld | Contact pagina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="HTML, CSS, Javascript, jQuery">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../Brouw/js/default.js" defer></script>
+</head>
+<body>
+<header>
+    <div id="zone-header-wrapper">
+        <a href="../Brouw/index.html" title="Brouwwereld - logo">
+            <img src="../Brouw/images/brouwwereld_logo_transparent.png" alt="Brouwwereld - logo" class="header-logo">
+        </a>
+        <menu></menu>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <form action="action_page.php">
+
+            <label for="aanhef">Aanhef</label>
+            <select id="aanhef" name="aanhef">
+                <option value="Dhr">Dhr</option>
+                <option value="Mvr">Mvr</option>
+            </select>
+            <label for="name">Naam</label>
+                 <input type="text" id="name" name="name" placeholder="Uw naam..">
+            <label for="email">Email-adress</label>
+                 <input type="email" id="email" name="email" placeholder="Email-adress">
+            <label for="tel">Telefoon</label>
+                 <input type="tel" id="tel" name="tel" placeholder="Telefoonnumer..">
+            <label for="vraag">Vraag/Opmerking</label>
+            <textarea id="vraag" name="subject" placeholder="Vraag opmerking"></textarea>
+            <p class="textaan">Aanmelden voor de nieuws brief?</p>
+            <div class="wrapper">
+                <label for="checkja">Ja</label>
+                <input type="radio" name="checkja" id="checkja" value="ja">
+                <label for="checknee">Nee</label>
+                <input type="radio" name="checkja" id="checknee" value="nee">
+            </div>
+            <input type="submit" value="Versturen">
+        </form>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
+
+
