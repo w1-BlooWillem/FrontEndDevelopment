@@ -42,40 +42,16 @@
         </div>
     </header>
     <main class="pad-both">
-        <h1>Uw winkelwagen</h1>
+        <h1 id="winkelhead">Uw winkelwagen</h1>
         <div id="winkelwagenitems">
-        <div class="winkelitem">
         
-            <div class="winkelimage"></div>
-            <div class="winkeltxt">
-                <div class="winkelobj" >
-                    Amstel wit<br/>
-                    Prijs: <div class="price">2,50</div><br/>
-                    <div class="winkelamount">1</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
-                </div>
-            </div>
-           <br/>
+        
+        
+        
         
         </div>
-        <div class="winkelitem">
-        
-            <div class="winkelimage"></div>
-            <div class="winkeltxt">
-                <div class="winkelobj">
-                    Amstel wit<br/>
-                    Prijs: <div class="price">3,50</div><br/>
-                    <div class="winkelamount">2</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
-                </div>
-            </div>
-           <br/>
-        
-        </div>
-        
-        
-        
-        <div class="winkelinfo">Totaal: <div id="winkelwagenprice">9,50</div> (incl. BTW)</div>
+        <div class="winkelinfo">Totaal: <div id="winkelwagenprice">0,00</div> (incl. BTW)</div>
             <button id="bestelknop">Bestellen</button>
-        </div>
         
     </main>
      <footer>
@@ -86,54 +62,91 @@
 <script>
     var winkelwagen = document.getElementById("winkelwagenitems");
     var winkelwagenprice = document.getElementById("winkelwagenprice");
+    var winkelhead = document.getElementById("winkelhead");
+    
     function initwinkelwagen(){
-        
         var winkelitems = winkelwagen.getElementsByClassName("winkelitem");
-        
         for(var a = 0;a < winkelitems.length;a++){
-            
             var c = a;
-            
-      
             var winkelitem = winkelitems[c];
-            inititem(winkelitem);
-            
-            
-            
+            inititem(winkelitem); 
         }
     };
-    initwinkelwagen();
+    
+    function test(){
+        
+        if(document.cookie != ""){
+            var jsonob = JSON.parse(document.cookie);
+            alert("test: " + jsonob["winkelwagen"])
+            if(jsonob.winkelwagen == undefined){
+               createcookiebase();
+            }
+            addproduct("test", 4, 2.50);
+            loadwinkelwagenitems();
+            initwinkelwagen();
+        } else {
+            createcookiebase();
+        }
+    }
+    
+    function loadwinkelwagenitems(){
+        var jsonob = JSON.parse(document.cookie);
+        winkelhead.innerHTML += " (" + jsonob.winkelwagen.length + ")"
+        for(var a = 0;a < jsonob.winkelwagen.length;a++){
+            var item = jsonob.winkelwagen[a];
+            winkelitem = document.createElement("div");
+            winkelitem.classList.add("winkelitem");
+            winkelimage = document.createElement("div");
+            winkelimage.classList.add("winkelimage");
+            winkeltxt = document.createElement("div");
+            winkeltxt.classList.add("winkeltxt");
+            winkeltxt.innerHTML = '<div class="winkelobj">' + item.name + '<br/>Prijs: <div class="price">' + item.price.toFixed(2).toString().replace(".", ",") + '</div><br/><div class="winkelamount">' + item.amount + '</div><div class="winkeladd">+</div><div class="winkelremove">-</div></div>'
+            winkelitem.appendChild(winkelimage);
+            winkelitem.appendChild(winkeltxt);
+            winkelwagen.appendChild(winkelitem);
+            
+            addwinkelwagenprice(item.price * item.amount);
+           
+        }
+    }
+    
+    function createcookiebase() { 
+        jsonob = JSON.parse("{}");   
+        jsonob.winkelwagen= [];
+        document.cookie = JSON.stringify(jsonob);
+    }
+    
+    function addproduct(name, amount, price){
+        jsonob = JSON.parse(document.cookie);
+        jsonob.winkelwagen.push({ name: name, amount: amount, price: price });
+        document.cookie = JSON.stringify(jsonob);
+        alert(document.cookie);
+    }
     
     function inititem(winkelitem){
         var winkeladd = winkelitem.getElementsByClassName("winkeladd")[0];
         var winkelremove = winkelitem.getElementsByClassName("winkelremove")[0];
-         var winkelamount = winkelitem.getElementsByClassName("winkelamount")[0];
+        var winkelamount = winkelitem.getElementsByClassName("winkelamount")[0];
         var price = winkelitem.getElementsByClassName("price")[0];
         var flatprice = parseFloat(price.innerHTML.replace(",", "."));
         winkeladd.onclick = function() {
-           
-                var amount = winkelamount.innerHTML;
-             if(amount == 10){
+            var amount = winkelamount.innerHTML;
+            if(amount == 10){
                 return;
             }
-            
-                amount++;  winkelamount.innerHTML = amount;
-        
-        
-         
-                addwinkelwagenprice(flatprice);
+            amount++;  
+            winkelamount.innerHTML = amount;
+            addwinkelwagenprice(flatprice);
        
         };
             
         winkelremove.onclick = function() {
-                
-                
-                var amount = winkelamount.innerHTML;
+            var amount = winkelamount.innerHTML;
             if(amount == 0){
                 return;
             }
-                amount--;  winkelamount.innerHTML = amount;
-               
+            amount--;  
+            winkelamount.innerHTML = amount;
             removewinkelwagenprice(flatprice);
         };
     }
@@ -147,6 +160,8 @@
         var text = (parseFloat(winkelwagenprice.innerHTML.replace(",", ".")) - amount).toFixed(2);
         winkelwagenprice.innerHTML = text.replace(".", ",");
     }
+    
+    test();
 
 </script>    
 </html>
@@ -155,6 +170,12 @@
     main {
         
         font-family: monospace;
+    }
+    
+    #winkelwagenitems {
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     .winkelitem {
         position: relative;
