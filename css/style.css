@@ -26,7 +26,7 @@ header{
     margin: 0 auto;
 }
 .background-logo{
-    position: absolute;
+    position: fixed;
     top:200px;
     left:50%;
     transform:translateX(-50%);
