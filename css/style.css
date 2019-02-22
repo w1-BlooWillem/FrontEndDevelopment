@@ -131,3 +131,117 @@ footer{
     width: 20%;
     height: 100%;
 }
+
+/* code jer */
+
+main {
+    font-family: monospace;
+}
+.winkelitem {
+    position: relative;
+    display: block;
+    background: transparent; 
+    height: 184px;
+    margin-top: 50px;
+    width: 368px;
+}
+
+.price, #winkelwagenprice {
+    position: relative;
+    width: auto;
+    display: inline-block
+    
+}
+.winkelimage {
+    position: relative;
+    display: block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background: transparent; 
+    height: 184px;
+    
+    float: left;
+    width: 184px;
+}
+
+.winkeltxt {
+    position: relative;
+    display: block;
+    background: transparent; 
+    height: 184px;
+    float: left;
+    width: 184px;
+}
+
+.winkelobj {
+    position: absolute;
+    display: block;
+    background: transparent; 
+    height: 150px;
+    float: left;
+    left: 25px;
+    font-size: 24px;
+    top: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.winkelamount, .winkeladd, .winkelremove {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    float: left;
+    margin-top: 10px;
+}
+
+.winkeladd, .winkelremove {
+    font-weight: bold;
+    font-size: 60px;
+    border: none;
+     -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
+    
+}
+
+.winkeladd:hover, .winkelremove:hover {
+    cursor: pointer;
+}
+
+.winkelinfo {
+    position: relative;
+    display: block;
+
+  
+
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+
+
+#bestelknop {
+    position: relative;
+    background: rgb(241, 183, 93);
+    border: 2px solid black;
+    box-shadow: 5px 3px 2px black;
+    margin-top: 20px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+}

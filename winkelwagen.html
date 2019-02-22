@@ -41,16 +41,16 @@
                 </div>
         </div>
     </header>
-    <main class="pad-both">
+    <main class="pad-both columns-12 center">
         <h1>Uw winkelwagen</h1>
         <div id="winkelwagenitems">
         <div class="winkelitem">
         
             <div class="winkelimage"></div>
             <div class="winkeltxt">
-                <div class="winkelobj">
+                <div class="winkelobj" >
                     Amstel wit<br/>
-                    Prijs: 2,50<br/>
+                    Prijs: <div class="price">2,50</div><br/>
                     <div class="winkelamount">1</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="winkeltxt">
                 <div class="winkelobj">
                     Amstel wit<br/>
-                    Prijs: 3,50<br/>
+                    Prijs: <div class="price">3,50</div><br/>
                     <div class="winkelamount">2</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
                 </div>
             </div>
@@ -72,111 +72,14 @@
         </div>
         
         
-        <div class="winkelinfo">Totaal: 9,50 (incl. BTW)</div>
+        
+        <div class="winkelinfo">Totaal: <div id="winkelwagenprice">9,50</div> (incl. BTW)</div>
             <button id="bestelknop">Bestellen</button>
+        </div>
         
     </main>
-    <footer>
+     <footer>
         &copy; Brouwwereld 2019 - Eindhoven
     </footer>
-</body>
+</body>  
 </html>
-
-<style>
-    main {
-        
-        font-family: monospace;
-    }
-    .winkelitem {
-        position: relative;
-        display: block;
-        background: transparent; 
-        height: 184px;
-        margin-top: 50px;
-        width: 368px;
-    }
-    .winkelimage {
-        position: relative;
-        display: block;
-        border: 2px solid black;
-        box-sizing: border-box;
-        background: transparent; 
-        height: 184px;
-        
-        float: left;
-        width: 184px;
-    }
-    
-    .winkeltxt {
-        position: relative;
-        display: block;
-        background: transparent; 
-        height: 184px;
-        float: left;
-        width: 184px;
-    }
-    
-    .winkelobj {
-        position: absolute;
-        display: block;
-        background: transparent; 
-        height: 150px;
-        float: left;
-        left: 25px;
-        font-size: 24px;
-        top: 25px;
-        padding: 10px;
-        box-sizing: border-box;
-        width: 200px;
-    }
-    
-    h1 {
-        font-size: 40px;
-    }
-    
-    .winkelamount, .winkeladd, .winkelremove {
-        position: relative;
-        border: 2px solid black;
-        border-radius: 5px;
-        height: 48px;
-        width: 48px;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 48px;
-        float: left;
-        margin-top: 10px;
-    }
-    
-    .winkeladd, .winkelremove {
-        font-weight: bold;
-        font-size: 60px;
-        border: none;
-        
-    }
-    
-    .winkelinfo {
-        position: relative;
-        display: block;
-   
-      
-  
-        font-size: 24px;
-        margin-top: 100px;
-    }
-    
-    
-    
-    #bestelknop {
-        position: relative;
-        background: rgb(241, 183, 93);
-        border: 2px solid black;
-        box-shadow: 5px 3px 2px black;
-        margin-top: 20px;
-        height: 60px;
-        font-size: 18px;
-        font-weight: bold;
-        width: 150px;
-    }
-
-
-</style>
