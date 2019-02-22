@@ -13,44 +13,22 @@
 <body>
     <header>
         <div id="zone-header-wrapper">
-            <a href="index.html" title="Brouwwereld - logo">
-                <img src="images/brouwwereld_logo_transparent.png" alt="Brouwwereld - logo" class="header-logo">
-            </a>
-            <div class="header-content-wrapper">
-                    <a href="index.html" title="Brouwwereld" class="menu-item">
-                        Home
-                    </a>
-                    <a href="overzicht.html" title="Brouwwereld" class="menu-item">
-                        Overzicht
-                    </a>
-                    <a href="winkelwagen.html" title="Brouwwereld" class="menu-item">
-                        Winkelwagen
-                    </a>
-                    <a href="nieuws.html" title="Brouwwereld" class="menu-item">
-                        Nieuws
-                    </a>
-                    <a href="contact.html" title="Brouwwereld" class="menu-item">
-                        Contact
-                    </a>
-            </div>
-                
-                <a href="contact.html" class="btn">Vrijblijvend contact opnemen</a>
-                <div class="winkelwagen-wrapper">
-                    <img src="images/winkelwagen.jpg" alt="Brouwwereld - logo">
-                    <div class="counter"></div>
-                </div>
+                <a href="index.html" title="Brouwwereld - logo">
+                    <img src="images/brouwwereld_logo_transparent.png" alt="Brouwwereld - logo" class="header-logo">
+                </a>
+                <menu></menu>
         </div>
     </header>
     <main class="pad-both columns-12 center">
         <h1>Uw winkelwagen</h1>
-        <div id="winkelwagenitems">
+        
         <div class="winkelitem">
         
             <div class="winkelimage"></div>
             <div class="winkeltxt">
-                <div class="winkelobj" >
+                <div class="winkelobj">
                     Amstel wit<br/>
-                    Prijs: <div class="price">2,50</div><br/>
+                    Prijs: 2,50<br/>
                     <div class="winkelamount">1</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
                 </div>
             </div>
@@ -63,7 +41,7 @@
             <div class="winkeltxt">
                 <div class="winkelobj">
                     Amstel wit<br/>
-                    Prijs: <div class="price">3,50</div><br/>
+                    Prijs: 3,50<br/>
                     <div class="winkelamount">2</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
                 </div>
             </div>
@@ -72,83 +50,14 @@
         </div>
         
         
-        
-        <div class="winkelinfo">Totaal: <div id="winkelwagenprice">9,50</div> (incl. BTW)</div>
+        <div class="winkelinfo">Totaal: 9,50 (incl. BTW)</div>
             <button id="bestelknop">Bestellen</button>
-        </div>
         
     </main>
-     <footer>
-        &copy; Brouwwereld 2019 - Eindhoven
+    <footer>
+
     </footer>
 </body>
-    
-<script>
-    var winkelwagen = document.getElementById("winkelwagenitems");
-    var winkelwagenprice = document.getElementById("winkelwagenprice");
-    function initwinkelwagen(){
-        
-        var winkelitems = winkelwagen.getElementsByClassName("winkelitem");
-        
-        for(var a = 0;a < winkelitems.length;a++){
-            
-            var c = a;
-            
-      
-            var winkelitem = winkelitems[c];
-            inititem(winkelitem);
-            
-            
-            
-        }
-    };
-    initwinkelwagen();
-    
-    function inititem(winkelitem){
-        var winkeladd = winkelitem.getElementsByClassName("winkeladd")[0];
-        var winkelremove = winkelitem.getElementsByClassName("winkelremove")[0];
-         var winkelamount = winkelitem.getElementsByClassName("winkelamount")[0];
-        var price = winkelitem.getElementsByClassName("price")[0];
-        var flatprice = parseFloat(price.innerHTML.replace(",", "."));
-        winkeladd.onclick = function() {
-           
-                var amount = winkelamount.innerHTML;
-             if(amount == 10){
-                return;
-            }
-            
-                amount++;  winkelamount.innerHTML = amount;
-        
-        
-         
-                addwinkelwagenprice(flatprice);
-       
-        };
-            
-        winkelremove.onclick = function() {
-                
-                
-                var amount = winkelamount.innerHTML;
-            if(amount == 0){
-                return;
-            }
-                amount--;  winkelamount.innerHTML = amount;
-               
-            removewinkelwagenprice(flatprice);
-        };
-    }
-    
-    function addwinkelwagenprice(amount){
-        var text = (parseFloat(winkelwagenprice.innerHTML.replace(",", ".")) + amount).toFixed(2);
-        winkelwagenprice.innerHTML = text.replace(".", ",");
-    }
-    
-    function removewinkelwagenprice(amount){
-        var text = (parseFloat(winkelwagenprice.innerHTML.replace(",", ".")) - amount).toFixed(2);
-        winkelwagenprice.innerHTML = text.replace(".", ",");
-    }
-
-</script>    
 </html>
 
 <style>
@@ -163,13 +72,6 @@
         height: 184px;
         margin-top: 50px;
         width: 368px;
-    }
-    
-    .price, #winkelwagenprice {
-        position: relative
-        width: auto;
-        display: inline-block
-        
     }
     .winkelimage {
         position: relative;
@@ -227,18 +129,7 @@
         font-weight: bold;
         font-size: 60px;
         border: none;
-         -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
         
-    }
-    
-    .winkeladd:hover, .winkelremove:hover {
-        cursor: pointer;
     }
     
     .winkelinfo {
