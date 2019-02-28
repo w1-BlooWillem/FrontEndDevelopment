@@ -84,6 +84,10 @@ header{
 #zone-header-wrapper .menu-item:hover{
     color:#F3B75B;
 }
+
+#zone-header-wrapper .active {
+    color: green;
+}
 .winkelwagen-wrapper{
     height:135px;
     display: table;
