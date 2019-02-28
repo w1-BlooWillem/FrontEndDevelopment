@@ -1,0 +1,13 @@
+<div class="winkelitem">
+        
+            <div class="winkelimage"></div>
+            <div class="winkeltxt">
+                <div class="winkelobj" >
+                    Amstel wit<br/>
+                    Prijs: <div class="price">2,50</div><br/>
+                    <div class="winkelamount">1</div><div class="winkeladd">+</div><div class="winkelremove">-</div>
+                </div>
+            </div>
+           <br/>
+        
+        </div>

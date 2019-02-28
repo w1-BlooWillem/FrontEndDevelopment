@@ -8,16 +8,303 @@ body {
     float:left;
 }
 header{
-    position: relative;
     width: 100%;
-    border: 3px solid black;
+    border-bottom:1px solid black;
     display: table;
-    margin: 0px;
-    box-sizing: border-box;
 }
 .pad-both{
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 50px;
+}
+#zone-header-wrapper{
+    position: relative;
+}
+.columns-12{
+    max-width:1600px;
+}
+.center{
+    margin: 0 auto;
+}
+.background-logo{
+    position: fixed;
+    top:200px;
+    left:50%;
+    transform:translateX(-50%);
+    opacity:.2;
+    width: 30%;
+}
+#product .content-wrapper{
+    width:80%;
+    float:left;
+}
+#product h1{
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#product p{
+    position: relative;
+    z-index: 5;
+    font-size: 20px;
+}
+.product-image{
+    width: 20%;
+    position: relative;
+    top:40px;
+}
+.btn{
+    background-color:#F3B75B;
+    color:black;
+    text-decoration: none;
+    padding: 15px;
+    border:1px solid rgba(255, 190, 93, 0.507);
+    position: relative;
+    top:53px;
+    left:100px;
+    font-size: 20px;
+}
+.header-content-wrapper{
+    float:left;
+    padding-top: 38px;
+    margin-left: 150px;
+}
+.btn:hover{
+    cursor:pointer;
+    background-color:#F9F1BF;
+    color:black;
+    transition:.4s all;
+}
+#zone-header-wrapper .menu-item{
+    padding-top:22px;
+    text-decoration: none;
+    color:black;
+    font-size: 40px;
+    padding-right: 20px;
+}
+#zone-header-wrapper .menu-item:hover{
+    color:#F3B75B;
+}
+.winkelwagen-wrapper{
+    height:135px;
+    display: table;
+    float:right;
+}
+.winkelwagen-wrapper img{
+    height:48px;
+    width: 48px;
+    display: table;
+    float:right;
+    right: 0;
+    padding-right:80px;
+    padding-left: 60px;
+    padding-top: 35px;
+}
+footer{
+    text-align: center;
+    border-top: 1px solid #000;
+    clear:both;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding:10px 0;
+}
+
+/* Code Willem */
+
+.product{
+    width: 25%;
+    float: left;
+    height: 30%;
+}
+.product img{
+    height: 10%;
+    width: 10%;
+}
+.newsArticle{
+    width: 80%;
+    float: left;
+    height: 100%;
+}
+.newsArticle img{
+    float: left;
+    display: block;
+    width: 20%;
+    height: 100%;
+}
+
+/* code jer */
+
+main {
+    font-family: monospace;
+}
+.winkelitem {
+    position: relative;
+    display: block;
+    background: transparent; 
+    height: 184px;
+    margin-top: 50px;
+    width: 368px;
+}
+
+.price, #winkelwagenprice {
+    position: relative;
+    width: auto;
+    display: inline-block
     
+}
+.winkelimage {
+    position: relative;
+    display: block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background: transparent; 
+    height: 184px;
+    
+    float: left;
+    width: 184px;
+}
+
+.winkeltxt {
+    position: relative;
+    display: block;
+    background: transparent; 
+    height: 184px;
+    float: left;
+    width: 184px;
+}
+
+.winkelobj {
+    position: absolute;
+    display: block;
+    background: transparent; 
+    height: 150px;
+    float: left;
+    left: 25px;
+    font-size: 24px;
+    top: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.winkelamount, .winkeladd, .winkelremove {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    float: left;
+    margin-top: 10px;
+}
+
+.winkeladd, .winkelremove {
+    font-weight: bold;
+    font-size: 60px;
+    border: none;
+     -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome and Opera */
+    
+}
+
+.winkeladd:hover, .winkelremove:hover {
+    cursor: pointer;
+}
+
+.winkelinfo {
+    position: relative;
+    display: block;
+
+  
+
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+
+
+#bestelknop {
+    position: relative;
+    background: rgb(241, 183, 93);
+    border: 2px solid black;
+    box-shadow: 5px 3px 2px black;
+    margin-top: 20px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+}
+
+/* contactpagina*/
+.container{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+}
+
+form{
+    width: 700px ;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #F9F1BF;
+}
+label[for=email], label[for=name], label[for=tel], label[for=vraag],label[for=aanhef]{
+    margin-left: 10px;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+label[for=checkja] {
+    margin-left: 10px;
+
+}
+.textaan {
+    margin-left: 10px;
+}
+#aanhef {
+    margin-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 8px;
+    border: 1px solid #cccccc;
+}
+input[type=radio] {
+    padding-right: 5px;
+}
+input[type=submit] {
+    margin: 0 auto;
+    display: block;
+    width: 65%;
+}
+input[type=email], input[type=text], input[type=tel]{
+    margin-left: 10px;
+    width: 75%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #cccccc;
+}
+label.check, label.radio {
+    text-align:left;
+}
+textarea {
+    width: 75%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid #cccccc;
+    resize: none;
+    height: 250px;
 }
