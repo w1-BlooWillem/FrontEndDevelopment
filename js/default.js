@@ -1,18 +1,16 @@
 var prevScrollpos = window.pageYOffset;
+var header = document.getElementsByTagName("header")[0];
+
 $(document).scroll(function() {
-var currentScrollPos = window.pageYOffset;
-if(currentScrollPos > 100){
- if (prevScrollpos  > currentScrollPos) {
-     document.getElementById("zone-header-wrapper").style.top = "0px";
-   
- } else if($(window).width() >= 767){
-   document.getElementById("zone-header-wrapper").style.top = "-350px";
- } else if($(window).width() <= 380 ){
- 
-document.getElementById("zone-header-wrapper").style.top = "-100px";
- }
- prevScrollpos = currentScrollPos;
-}
+    var currentScrollPos = window.pageYOffset;
+    if(currentScrollPos > header.offsetHeight){
+        header.style.position = "absolute";
+        header.style.top = header.offsetHeight;
+    } else {
+       
+    }
+    prevScrollpos = currentScrollPos;
+    
 });
 
 var winkelwagen = document.getElementById("winkelwagenitems");
